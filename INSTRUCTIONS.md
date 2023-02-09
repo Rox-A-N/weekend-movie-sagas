@@ -31,7 +31,7 @@ Genres can be applied to many different movies. Movies can have multiple genres.
 
 We've given you the database complete with a junction table and data for `movies_genres`.
  
-### Movie Poster Images
+### Movie Poster Images- can add more movie/Posters(do after all else is working)
 We've added some movie posters in the `public/images` folder, and the database is set up to use them. If you want your own posters, you'll want to add the files there!
 
 ---
