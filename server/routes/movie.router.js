@@ -25,7 +25,10 @@ router.post('/', (req, res) => {
   RETURNING "id";`
 
   // FIRST QUERY MAKES MOVIE
-  pool.query(insertMovieQuery, [req.body.title, req.body.poster, req.body.description])
+  pool.query(insertMovieQuery, [
+    req.body.title, 
+    req.body.poster, 
+    req.body.description])
   .then(result => {
     console.log('New Movie Id:', result.rows[0].id); //ID IS HERE!
     
