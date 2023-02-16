@@ -57,16 +57,7 @@ const movies = (state = [], action) => {
     }
 }
 
-// Used to store the movie details
-const details = (state = [], action) => {
-    console.log('In details reducer', action);
-    // switch (action.type) {
-    //     case 'FETCH_DETAILS':
-    //         return action.payload;
-    //     default:
-    //         return state;
-    // }
-}
+
 
 // Used to store the movie genres
 const genres = (state = [], action) => {
@@ -82,8 +73,7 @@ const genres = (state = [], action) => {
 const storeInstance = createStore(
     combineReducers({
         movies,
-        genres,
-        // details
+        genres
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
