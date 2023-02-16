@@ -14,6 +14,8 @@ import axios from 'axios';
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
+    // FETCH_DETAILS
+    yield takeEvery('FETCH_DETAILS', fetchMovieDetails);
     // yield takeEvery('FETCH_GENRES', fetchGenres);    // future generator function fetchGenres
 }
 
@@ -30,6 +32,18 @@ function* fetchAllMovies() {
         
 }
 
+function* fetchMovieDetails(action) {      
+    // define id with the payload
+    console.log(action);
+    try {
+        const movie = yield axios.get(`/api/movie/${action.payload.id}`);
+        console.log('get details:', movie);
+        yield put({type: 'SET_MOVIES', payload: movie.data});
+    } catch {
+        console.log('get details error');
+    }
+}
+
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
@@ -44,15 +58,15 @@ const movies = (state = [], action) => {
 }
 
 // Used to store the movie details
-// const details = (state = [], action) => {
-//     console.log('In details reducer', action);
-//     // switch (action.type) {
-//     //     case 'FETCH_DETAILS':
-//     //         return action.payload;
-//     //     default:
-//     //         return state;
-//     // }
-// }
+const details = (state = [], action) => {
+    console.log('In details reducer', action);
+    // switch (action.type) {
+    //     case 'FETCH_DETAILS':
+    //         return action.payload;
+    //     default:
+    //         return state;
+    // }
+}
 
 // Used to store the movie genres
 const genres = (state = [], action) => {
