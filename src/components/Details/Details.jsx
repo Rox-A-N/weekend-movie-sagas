@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 
 function Details() {
@@ -8,20 +8,24 @@ function Details() {
     const dispatch = useDispatch();
     const history = useHistory();
     const movies = useSelector(store => store.movies);
+    const { id } = useParams();
+    const movie = useSelector((store) => store.movieDetails);
+
 
     useEffect(() => {
-        dispatch({ type: 'FETCH_DETAILS' });
+        console.log('here is the ', {id});
+        dispatch({ type: 'FETCH_DETAILS',
+                    payload: {id} }); // grab the specific id
     }, []);
 
     const routeToList = () => {
-        console.log('in routeToList');
         history.push('/');
     }
 
  
     return (
         <main>
-            <h1>{movies.title}</h1>
+            <h1>Movie Details</h1>
             <section className="movieDetails">
                 {movies.map(movie => {
                     return (
