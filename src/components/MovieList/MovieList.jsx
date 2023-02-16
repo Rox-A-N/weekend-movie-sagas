@@ -14,16 +14,16 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event, id) => {
         event.preventDefault();
         console.log('poster is clicked?');
 
-        routeToDetails();
+        routeToDetails(id);
     }
 
-    const routeToDetails = () => {
-        console.log('in the MovieList routeToDetails');
-        history.push('/details');
+    const routeToDetails = (id) => {
+        console.log('in the MovieList routeToDetails', id);
+        history.push(`/movies/${id}`);
     }
 
 
@@ -35,7 +35,7 @@ function MovieList() {
                     return (
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title} onClick={handleSubmit}/>
+                            <img src={movie.poster} alt={movie.title} onClick={(event) => handleSubmit(event, movie.id)}/>
                         </div>
                     );
                 })}
