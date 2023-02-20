@@ -45,9 +45,10 @@ Details page has a Back to List button which brings the user to the Home/List Pa
 React, React-Redux, Redux-Sagas, Express, PostgreSQL, Axios, Node.js, JavaScript, CSS, Material-UI
 
 
+Movie List Page- before style elements added:
 <img width="1228" alt="Screenshot 2023-02-20 at 9 17 07 AM" src="https://user-images.githubusercontent.com/106710145/220153306-fc606d7e-a0da-4665-adb1-da91c0ad6b3b.png">
 
-
+Details Page- before style elements added:
 <img width="1324" alt="Screenshot 2023-02-20 at 9 35 09 AM" src="https://user-images.githubusercontent.com/106710145/220153401-a0e6eed8-ac80-4dd2-bdfe-04be3fb2cd2c.png">
 
 
