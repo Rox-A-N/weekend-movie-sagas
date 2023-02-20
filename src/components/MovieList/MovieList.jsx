@@ -35,14 +35,18 @@ function MovieList() {
 
 
     return (
-        <main>
-            <h1>MovieList</h1>
+        <main className='background'>
+            <h2>MovieList</h2>
             <section className="movies">
                 {movies.map(movie => {
                     return (
-                        <div key={movie.id} >
-                            <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title} onClick={(event) => handleSubmit(event, movie.id)}/>
+                        <div className='card' key={movie.id} >
+                            <div className='header'>
+                                <h3>{movie.title}</h3>
+                            </div>
+                            <div className='container'>
+                                <img className='card-layout__item' src={movie.poster} alt={movie.title} onClick={(event) => handleSubmit(event, movie.id)}/>
+                            </div>
                         </div>
                     );
                 })}
