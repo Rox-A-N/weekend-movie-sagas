@@ -14,9 +14,17 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
+    // useEffect(() => {
+        
+
     const handleSubmit = (event, id) => {
         event.preventDefault();
         console.log('poster is clicked?');
+        dispatch({ 
+            type: 'FETCH_GENRES',
+            payload: id 
+        });
+    
 
         routeToDetails(id);
     }
