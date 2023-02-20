@@ -1,4 +1,78 @@
 .movies {
+    max-width: 100%;
+    border-radius: 5px;
     display : flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    background: content-box radial-gradient(navy, skyblue);
+    border: darkblue 5px;
+    border-style: solid white;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
 }
+
+h3 {
+    display: inline-flex;
+    padding: 10px 20px ;
+    flex-direction: column;
+}
+
+img {
+    display: block;
+    width: 200px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border: 1px rgb(18, 17, 30) solid;
+    border-radius: 12px 12px;
+    margin: 10px;
+    background-color: rgb(184, 209, 230);
+    max-height: fit-content;
+}
+
+.header {
+    /* margin:auto; */
+    width: auto;
+    /* height: 10%; */
+    background: rgb(145, 69, 82);
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.container {
+    margin: 5px 10px;
+    padding: 10px;
+    background-color: floralwhite;
+    max-width: auto;
+    max-height: fit-content;
+}
+
+
+/* .card-layout {
+    display: flex;
+
+    /* Put a card in the next row when previous cards take all width */
+    /* flex-wrap: wrap;
+
+    margin-left:auto;
+    margin-right:auto;
+    padding: 50px;
+} */
+
+/* .card-layout__item {  */
+    /* There will be 3 cards per row  */
+    /* flex-basis: 33.33333%;
+
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+ } */ 
+
