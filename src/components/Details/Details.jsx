@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './Details.css';
 import SubmitButton from '../../ui_library/SubmitButton';
 
@@ -8,7 +8,6 @@ function Details() {
 
     const dispatch = useDispatch();
 
-    const history = useHistory();
     const movies = useSelector(store => store.movies);
     const genres = useSelector((store) => store.genres);
 
