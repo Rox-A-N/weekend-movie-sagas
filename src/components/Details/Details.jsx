@@ -22,9 +22,6 @@ function Details() {
         payload: {id} }); // grab the specific id
     }, []);
     
-    // const routeToList = () => {
-    //     history.push('/');
-    // }
     
     
     return (
