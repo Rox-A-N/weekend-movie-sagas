@@ -1,6 +1,6 @@
 # Movie Sagas- Mixing it up with React-Redux-Sagas
 
-Duration: 2 Weeks to Completion
+Duration: 2 Weeks 
 
 ## Description
 
@@ -17,10 +17,10 @@ It will show:
 
 Project Solves:
     -Displaying Individual Movie Details with each movies specific genres. I worked on this in two parts: 
-        Adding features to the existing Movie App with React-Redux and Redux-Sagas
-        Utilizing SQL, with my database created in Postico consisting of three tables.
+        1. Adding features to the existing Movie App with React-Redux and Redux-Sagas
+        2. Utilizing SQL, with my database created in Postico consisting of three tables.
        
-Install Dependencies
+# Install Dependencies
     1. npm install
     2. npm run server
     3. npm run client
@@ -35,7 +35,7 @@ This shows all details including ALL genres for the selected movie, including ti
 Details page has a Back to List button which brings the user to the Home/List Page.  This was styled using MUI and put into it's own component and imported into the Details page.
 
 
-## Database Setup-X
+## Database Setup
 
 1. Create a database named `saga_movies_weekend`
 2. Run the queries from `database.sql` on the `saga_movies_weekend` database
