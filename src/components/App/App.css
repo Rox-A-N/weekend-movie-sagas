@@ -40,6 +40,8 @@ body {
 
   h1 {
   margin: 20px;
+  font-family:'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+  background: content-box radial-gradient(rgb(78, 18, 35), rgba(90, 115, 154, 0.608));
   }
   
 
