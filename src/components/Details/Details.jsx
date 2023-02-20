@@ -6,31 +6,39 @@ import { useHistory, useParams } from 'react-router-dom';
 function Details() {
 
     const dispatch = useDispatch();
+
     const history = useHistory();
     const movies = useSelector(store => store.movies);
+    const genres = useSelector((store) => store.genres);
+
     const { id } = useParams();
-    const movie = useSelector((store) => store.movieDetails);
 
-
+    
+    
     useEffect(() => {
         console.log('here is the ', {id});
         dispatch({ type: 'FETCH_DETAILS',
-                    payload: {id} }); // grab the specific id
+        payload: {id} }); // grab the specific id
     }, []);
-
+    
     const routeToList = () => {
         history.push('/');
     }
-
- 
+    
+    
     return (
         <main>
             <h1>Movie Details</h1>
             <section className="movieDetails">
-                {movies.map(movie => {
+                <h2>Genres:</h2>
+            {/* Map through genres to be rendered on the DOM */}
+                {genres.map((genre, i) => (
+                    <h3 key={i}>{genre.name}</h3>
+                ))}        
+                {movies.map((movie) => {
                     return (
                         <div key={movie.id} >
-                            <h3>{movie.title}</h3>
+                            <h2>{movie.title}</h2>
                             <img src={movie.poster} alt={movie.title}/>
                             <h2>{movie.description}</h2>
                             <button onClick={routeToList}>Return to List</button>
