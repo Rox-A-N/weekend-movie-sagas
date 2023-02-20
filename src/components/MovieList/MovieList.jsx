@@ -14,7 +14,6 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
-    // useEffect(() => {
         
 
     const handleSubmit = (event, id) => {
