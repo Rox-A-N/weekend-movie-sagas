@@ -25,7 +25,7 @@ function Details() {
     
     return (
         <main>
-            <h1>Movie Details</h1>
+            <h2>Movie Details</h2>
             <section className="movieDetails">
                 <h3>Genres:</h3>
             {/* Map through genres to be rendered on the DOM */}
