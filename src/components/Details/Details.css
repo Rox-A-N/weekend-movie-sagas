@@ -9,3 +9,7 @@ img {
     padding: 10px;
     background:  rgb(195, 215, 231);
 }
+
+div {
+    padding-bottom: 10px;
+}
