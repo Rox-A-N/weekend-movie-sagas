@@ -26,21 +26,21 @@ function* fetchAllMovies() {
         console.log('get all:', movies.data);
         yield put({ type: 'SET_MOVIES', payload: movies.data });
 
-    } catch {
-        console.log('get all error');
+    } catch (e) {
+        console.log('get all error', e);
     }
         
 }
 
 function* fetchMovieDetails(action) {      
     // define id with the payload
-    console.log(action);
+    // console.log('fetchMovieDetails saga: ', action);
     try {
         const movie = yield axios.get(`/api/movie/${action.payload.id}`);
-        console.log('get details:', movie);
+        console.log('get details:', movie.data);
         yield put({type: 'SET_MOVIES', payload: movie.data});
-    } catch {
-        console.log('get details error');
+    } catch (e) {
+        console.log('get details error', e);
     }
 }
 
