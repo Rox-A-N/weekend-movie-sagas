@@ -8,7 +8,8 @@ function Details() {
 
     const dispatch = useDispatch();
 
-    const movies = useSelector(store => store.movies);
+    // name of const a pizza situation, store.movies comes from the reducer name
+    const movies = useSelector(store => store.movies);  
     const genres = useSelector((store) => store.genres);
 
     const { id } = useParams();
@@ -18,8 +19,8 @@ function Details() {
     useEffect(() => {
         console.log('here is the ', {id});
         dispatch({ type: 'FETCH_DETAILS',
-        payload: {id} }); // grab the specific id
-    }, []);
+        payload: { id } }); // grab the specific id
+    }, [ id ]);             // will update if id changes, not just on page load
     
     
     
